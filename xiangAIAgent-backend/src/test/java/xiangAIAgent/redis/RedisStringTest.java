@@ -1,4 +1,4 @@
-package xiangPicBackend.redis;  // 注意包路径
+package xiangAIAgent.redis;  // 注意包路径
 
 import com.xiang.ai.xiangAIAgent.XiangAIAgentApplication;
 import org.junit.jupiter.api.Test;
