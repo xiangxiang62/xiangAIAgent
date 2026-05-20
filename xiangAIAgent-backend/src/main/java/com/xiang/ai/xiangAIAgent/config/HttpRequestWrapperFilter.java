@@ -2,11 +2,12 @@ package com.xiang.ai.xiangAIAgent.config;
 
 import cn.hutool.http.ContentType;
 import cn.hutool.http.Header;
+import jakarta.servlet.*;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-import javax.servlet.*;
-import javax.servlet.http.HttpServletRequest;
+
 import java.io.IOException;
 
 /**

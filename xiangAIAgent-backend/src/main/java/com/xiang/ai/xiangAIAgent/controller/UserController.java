@@ -14,11 +14,11 @@ import com.xiang.ai.xiangAIAgent.model.dto.user.*;
 import com.xiang.ai.xiangAIAgent.model.vo.user.LoginUserVO;
 import com.xiang.ai.xiangAIAgent.model.vo.user.UserVO;
 import com.xiang.ai.xiangAIAgent.service.UserService;
+import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @RestController

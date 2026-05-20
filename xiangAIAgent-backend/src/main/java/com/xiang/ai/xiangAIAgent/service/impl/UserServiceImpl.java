@@ -14,13 +14,13 @@ import com.xiang.ai.xiangAIAgent.model.vo.user.LoginUserVO;
 import com.xiang.ai.xiangAIAgent.model.vo.user.UserVO;
 import com.xiang.ai.xiangAIAgent.service.UserService;
 import com.xiang.ai.xiangAIAgent.mapper.UserMapper;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 
-import javax.servlet.http.HttpServletRequest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -247,7 +247,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     @Override
     public String getEncryptPassword(String userPassword) {
         // 盐值，混淆密码
-        final String SALT = "yupi";
+        final String SALT = "kunjinkao";
         return DigestUtils.md5DigestAsHex((SALT + userPassword).getBytes());
     }
 

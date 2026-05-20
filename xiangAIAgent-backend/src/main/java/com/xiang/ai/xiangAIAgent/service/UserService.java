@@ -6,8 +6,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.xiang.ai.xiangAIAgent.model.dto.user.UserQueryRequest;
 import com.xiang.ai.xiangAIAgent.model.vo.user.LoginUserVO;
 import com.xiang.ai.xiangAIAgent.model.vo.user.UserVO;
+import jakarta.servlet.http.HttpServletRequest;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**

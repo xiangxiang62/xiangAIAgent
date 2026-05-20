@@ -1,6 +1,6 @@
-package com.xiang.ai.xiangAIAgent.redis;  // 注意包路径
+package xiangPicBackend.redis;  // 注意包路径
 
-import com.xiang.ai.xiangAIAgent.xiangAgentBackendApplication;
+import com.xiang.ai.xiangAIAgent.XiangAIAgentApplication;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -9,7 +9,7 @@ import org.springframework.data.redis.core.ValueOperations;
 
 import static org.springframework.test.util.AssertionErrors.*;
 
-@SpringBootTest(classes = xiangAgentBackendApplication.class)
+@SpringBootTest(classes = XiangAIAgentApplication.class)
 public class RedisStringTest {
 
     @Autowired
