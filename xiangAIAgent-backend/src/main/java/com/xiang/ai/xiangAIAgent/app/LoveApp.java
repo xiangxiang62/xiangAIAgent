@@ -2,6 +2,7 @@ package com.xiang.ai.xiangAIAgent.app;
 
 import com.xiang.ai.xiangAIAgent.advisor.MyLoggerAdvisor;
 import com.xiang.ai.xiangAIAgent.advisor.ReReadingAdvisor;
+import com.xiang.ai.xiangAIAgent.chatmemory.FileBasedChatMemory;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
@@ -50,6 +51,8 @@ public class LoveApp {
     public LoveApp(ChatModel dashscopeChatModel) {
         // 初始化基于内存的对话记忆
         ChatMemory chatMemory = new InMemoryChatMemory();
+//        String fileDir = System.getProperty("user.dir") + "/chat-memory";
+//        ChatMemory chatMemory = new FileBasedChatMemory(fileDir);
         chatClient = ChatClient.builder(dashscopeChatModel)
                 .defaultSystem(SYSTEM_PROMPT)
                 .defaultAdvisors(
