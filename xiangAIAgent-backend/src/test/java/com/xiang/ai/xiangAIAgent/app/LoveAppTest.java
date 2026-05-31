@@ -44,7 +44,7 @@ class LoveAppTest {
     @Test
     void doChatWithArrayStr() {
         String chatId = UUID.randomUUID().toString();
-        List<String> result = loveApp.doChatWithArrayStr("你好，我是程序员鱼皮，我想让另一半（编程导航）更爱我，但我不知道该怎么做", chatId);
+        loveApp.doChatWithArrayStr("你好，我是程序员鱼皮，我想让另一半（编程导航）更爱我，但我不知道该怎么做", chatId)
         Assertions.assertTrue(true);
     }
 }

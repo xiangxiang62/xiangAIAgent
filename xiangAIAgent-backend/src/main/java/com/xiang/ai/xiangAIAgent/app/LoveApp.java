@@ -1,6 +1,7 @@
 package com.xiang.ai.xiangAIAgent.app;
 
 import com.xiang.ai.xiangAIAgent.advisor.MyLoggerAdvisor;
+import com.xiang.ai.xiangAIAgent.advisor.ReReadingAdvisor;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.client.ChatClient;
@@ -141,8 +142,12 @@ public class LoveApp {
                 .prompt()
                 .system(SYSTEM_PROMPT + "每次对话后都要生成恋爱结果，标题为{用户名}的恋爱报告，内容为建议列表")
                 .user(message)
+                // 重读 拦截器
+//                .advisors(new ReReadingAdvisor())
+                // 对话记忆 Advisors
                 .advisors(spec -> spec.param(CHAT_MEMORY_CONVERSATION_ID_KEY, chatId)
                         .param(CHAT_MEMORY_RETRIEVE_SIZE_KEY, 10))
+
                 .call()
                 .entity(new ListOutputConverter(new DefaultConversionService()) {
                 });
