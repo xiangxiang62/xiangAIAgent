@@ -22,7 +22,7 @@ class LoveAppTest {
     void doChatWithReport() {
         String chatId = UUID.randomUUID().toString();
         // 第一轮
-        String message = "你好，我是程序员鱼皮，我想让另一半（编程导航）更爱我，但我不知道该怎么做";
+        String message = "你好，我是程序员锟斤拷，我想让另一半（编程导航）更爱我，但我不知道该怎么做";
         LoveApp.LoveReport loveReport = loveApp.doChatWithReport(message, chatId);
         Assertions.assertNotNull(loveReport);
     }
@@ -30,21 +30,21 @@ class LoveAppTest {
     @Test
     void doChatWithReportList() {
         String chatId = UUID.randomUUID().toString();
-        List<LoveApp.LoveReport> loveReports = loveApp.doChatWithReportList("你好，我是程序员鱼皮，我想让另一半（编程导航）更爱我，但我不知道该怎么做", chatId);
+        List<LoveApp.LoveReport> loveReports = loveApp.doChatWithReportList("你好，我是程序员锟斤拷，我想让另一半（编程导航）更爱我，但我不知道该怎么做", chatId);
         Assertions.assertTrue(true);
     }
 
     @Test
     void doChatWithMap() {
         String chatId = UUID.randomUUID().toString();
-        Map<String, Object> objectMap = loveApp.doChatWithMap("你好，我是程序员鱼皮，我想让另一半（编程导航）更爱我，但我不知道该怎么做", chatId);
+        Map<String, Object> objectMap = loveApp.doChatWithMap("你好，我是程序员锟斤拷，我想让另一半（编程导航）更爱我，但我不知道该怎么做", chatId);
         Assertions.assertTrue(true);
     }
 
     @Test
     void doChatWithArrayStr() {
         String chatId = UUID.randomUUID().toString();
-        loveApp.doChatWithArrayStr("你好，我是程序员鱼皮，我想让另一半（编程导航）更爱我，但我不知道该怎么做", chatId)
+        loveApp.doChatWithArrayStr("你好，我是程序员锟斤拷，我想让另一半（编程导航）更爱我，但我不知道该怎么做", chatId);
         Assertions.assertTrue(true);
     }
 }
